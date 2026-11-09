@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
+import Skills from "./components/Skills.jsx";
 
 export default function App() {
     return (
@@ -8,6 +9,7 @@ export default function App() {
             <Navbar />
             <Hero />
             <About />
+            <Skills />
         </>
     );
 }

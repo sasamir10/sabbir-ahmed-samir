@@ -1,7 +1,11 @@
+import Navbar from "./components/Navbar.jsx";
+import Hero from "./components/Hero.jsx";
+
 export default function App() {
     return (
         <>
-            <p className="text-5xl">Hello React...</p>
+            <Navbar />
+            <Hero />
         </>
     );
 }

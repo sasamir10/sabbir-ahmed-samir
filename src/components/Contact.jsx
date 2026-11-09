@@ -126,9 +126,7 @@ export default function Contact() {
                                     href={href}
                                     aria-label={`${name} profile (link not provided)`}
                                     className="flex min-h-16 items-center gap-4 rounded-xl border border-border bg-bg-2 px-5 py-4 text-gray transition-all duration-200 hover:border-[rgba(0,229,192,0.35)] hover:bg-cyan-soft hover:text-cyan focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
-                                    onClick={(event) =>
-                                        event.preventDefault()
-                                    }
+                                    onClick={(event) => event.preventDefault()}
                                 >
                                     <Icon
                                         name={icon}
@@ -154,7 +152,7 @@ export default function Contact() {
                             className="size-[1.1rem] shrink-0 text-cyan"
                         />
                         <span className="text-[0.88rem]">
-                            <span className="mr-2 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-gray-dark">
+                            <span className="mr-2 font-mono text-[0.7rem] uppercase tracking-widest text-gray-dark">
                                 Location
                             </span>
                             Sylhet, Bangladesh
@@ -163,7 +161,7 @@ export default function Contact() {
                     <div className="flex items-center gap-3 text-gray">
                         <span className="size-2 shrink-0 rounded-full bg-cyan shadow-[0_0_12px_var(--cyan-glow)]" />
                         <span className="text-[0.88rem]">
-                            <span className="mr-2 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-gray-dark">
+                            <span className="mr-2 font-mono text-[0.7rem] uppercase tracking-widest text-gray-dark">
                                 Availability
                             </span>
                             Open to Freelance

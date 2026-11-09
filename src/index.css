@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+:root {
+    color-scheme: dark;
+
+    --bg: #060a0f;
+    --bg-2: #0c1219;
+    --bg-3: #111a24;
+    --cyan: #03d697;
+    --cyan-dim: #00e5a0;
+    --cyan-glow: rgba(0, 229, 192, 0.18);
+    --cyan-soft: rgba(0, 229, 192, 0.08);
+    --white: #f0f6ff;
+    --gray: #8fa3b8;
+    --gray-dark: #3a4a5a;
+    --border: rgba(0, 229, 192, 0.12);
+    --shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    --radius: 14px;
+    --content-width: 1200px;
+}
+
+@theme inline {
+    --color-bg: var(--bg);
+    --color-bg-2: var(--bg-2);
+    --color-bg-3: var(--bg-3);
+    --color-cyan: var(--cyan);
+    --color-cyan-dim: var(--cyan-dim);
+    --color-cyan-glow: var(--cyan-glow);
+    --color-cyan-soft: var(--cyan-soft);
+    --color-white: var(--white);
+    --color-gray: var(--gray);
+    --color-gray-dark: var(--gray-dark);
+    --color-border: var(--border);
+    --font-head: "Outfit", sans-serif;
+    --font-body: "DM Sans", sans-serif;
+    --font-mono: "Space Mono", monospace;
+    --radius-base: var(--radius);
+    --container-content: var(--content-width);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    background: var(--bg);
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    background: var(--bg);
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}

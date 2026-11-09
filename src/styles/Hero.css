@@ -1,0 +1,338 @@
+.hero-section::before,
+.hero-section::after {
+    position: absolute;
+    content: "";
+    pointer-events: none;
+}
+
+.hero-section::before {
+    top: -10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 229, 192, 0.07) 0%,
+        transparent 65%
+    );
+}
+
+.hero-section::after {
+    bottom: -5%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 100, 255, 0.04) 0%,
+        transparent 65%
+    );
+}
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 229, 192, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 192, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+.hero-reveal {
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.hero-code-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hero-code-float {
+    position: absolute;
+    color: rgba(0, 229, 192, 0.12);
+    font-family: "Space Mono", monospace;
+    font-size: 0.72rem;
+    filter: blur(0.5px);
+    user-select: none;
+    white-space: nowrap;
+    animation: hero-float-code 18s ease-in-out infinite;
+}
+
+.hero-code-float.c1 {
+    top: 12%;
+    left: 60%;
+    animation-delay: 0s;
+    animation-duration: 20s;
+}
+
+.hero-code-float.c2 {
+    top: 25%;
+    left: 72%;
+    animation-delay: 3s;
+    animation-duration: 17s;
+}
+
+.hero-code-float.c3 {
+    top: 40%;
+    left: 55%;
+    animation-delay: 6s;
+    animation-duration: 22s;
+}
+
+.hero-code-float.c4 {
+    top: 58%;
+    left: 68%;
+    animation-delay: 1.5s;
+    animation-duration: 19s;
+}
+
+.hero-code-float.c5 {
+    top: 70%;
+    left: 50%;
+    animation-delay: 4s;
+    animation-duration: 21s;
+}
+
+.hero-code-float.c6 {
+    top: 18%;
+    right: 5%;
+    animation-delay: 7s;
+    animation-duration: 16s;
+}
+
+.hero-code-float.c7 {
+    top: 35%;
+    right: 8%;
+    animation-delay: 2s;
+    animation-duration: 24s;
+}
+
+.hero-code-float.c8 {
+    top: 55%;
+    right: 3%;
+    animation-delay: 9s;
+    animation-duration: 18s;
+}
+
+.hero-code-float.c9 {
+    top: 78%;
+    left: 62%;
+    animation-delay: 5s;
+    animation-duration: 20s;
+}
+
+.hero-code-float.c10 {
+    top: 10%;
+    left: 78%;
+    animation-delay: 11s;
+    animation-duration: 23s;
+}
+
+.hero-code-float.c11 {
+    top: 85%;
+    left: 55%;
+    animation-delay: 8s;
+    animation-duration: 19s;
+}
+
+.hero-code-float.c12 {
+    top: 45%;
+    right: 15%;
+    animation-delay: 13s;
+    animation-duration: 17s;
+}
+
+@keyframes hero-float-code {
+    0%,
+    100% {
+        transform: translate(
+            var(--parallax-x, 0px),
+            var(--parallax-y, 0px)
+        );
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translate(
+            var(--parallax-x, 0px),
+            calc(var(--parallax-y, 0px) - 18px)
+        );
+        opacity: 1;
+    }
+}
+
+.hero-badge-dot {
+    animation: hero-pulse 2s infinite;
+}
+
+@keyframes hero-pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 229, 192, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(0, 229, 192, 0);
+    }
+}
+
+.hero-visual {
+    flex: none;
+}
+
+.hero-ring {
+    position: absolute;
+    border: 1px solid rgba(0, 229, 192, 0.12);
+    border-radius: 50%;
+}
+
+.hero-ring-1 {
+    width: 300px;
+    height: 300px;
+    border-top-color: rgba(0, 229, 192, 0.5);
+    animation: hero-spin-ring 25s linear infinite;
+}
+
+.hero-ring-2 {
+    width: 360px;
+    height: 360px;
+    border-right-color: rgba(0, 229, 192, 0.3);
+    animation: hero-spin-ring 40s linear infinite reverse;
+}
+
+.hero-ring-3 {
+    width: 420px;
+    height: 420px;
+    border-style: dashed;
+    border-left-color: rgba(0, 229, 192, 0.15);
+    animation: hero-spin-ring 60s linear infinite;
+}
+
+@keyframes hero-spin-ring {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-avatar-inner {
+    background: linear-gradient(135deg, var(--bg-3) 0%, #0d2035 100%);
+}
+
+.hero-avatar-glow {
+    background: radial-gradient(
+        circle at 40% 35%,
+        rgba(0, 229, 192, 0.12) 0%,
+        transparent 60%
+    );
+}
+
+.hero-tech-tag {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(1, 221, 184, 0.25);
+    border-radius: 8px;
+    padding: 0.35rem 0.7rem;
+    color: var(--cyan);
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    white-space: nowrap;
+    backdrop-filter: blur(8px);
+    animation: hero-float-tag 4s ease-in-out infinite;
+}
+
+.hero-tech-tag.tag-react {
+    top: 12%;
+    left: 0;
+    animation-delay: 0s;
+}
+
+.hero-tech-tag.tag-css {
+    bottom: 15%;
+    left: 2%;
+    animation-delay: 1s;
+}
+
+.hero-tech-tag.tag-js {
+    top: 10%;
+    right: 2%;
+    animation-delay: 2s;
+}
+
+.hero-tech-tag.tag-git {
+    right: 0;
+    bottom: 12%;
+    animation-delay: 0.5s;
+}
+
+@keyframes hero-float-tag {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-visual,
+    .hero-ring-3 {
+        width: 340px;
+        height: 340px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-visual {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-ring-1 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-ring-2 {
+        width: 260px;
+        height: 260px;
+    }
+
+    .hero-ring-3 {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-code-float {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-code-float,
+    .hero-badge-dot,
+    .hero-ring,
+    .hero-tech-tag {
+        animation: none;
+    }
+
+    .hero-reveal {
+        transition: none;
+    }
+}

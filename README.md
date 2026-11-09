@@ -1,16 +1,62 @@
-# React + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio showcasing my background, technical skills, and selected projects, built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+![Portfolio Preview](public/sabbirahmed-preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live Preview:** [Sabbir Ahmed Samir](https://sabbir-ahmed-samir.vercel.app/)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive, single-page portfolio layout.
+- Component-based architecture built with React.
+- Fixed navigation with active-section tracking and smooth scrolling.
+- Hero section with typing animation, pointer-based parallax, and reveal effects.
+- About section with profile information and highlights.
+- Skills section with scroll-triggered animated progress bars.
+- Projects section featuring project cards, technology tags, and hover effects.
+- Contact section with a direct email link and professional social links.
+- Responsive footer.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, Vite
+- **Styling:** Tailwind CSS 4, custom CSS for selected visual effects
+- **Language:** JavaScript (ES6+), JSX, CSS
+- **UI and interactions:** React Hooks, Intersection Observer API
+- **Tools:** npm, Git, GitHub
+
+## Project Structure
+
+```text
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   │       ├── profile-1.jpeg
+│   │       └── profile-2.jpeg
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Contact.jsx
+│   │   └── Footer.jsx
+│   ├── styles/
+│   │   └── Hero.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── .gitignore
+```
+
+## Author
+
+**Sabbir Ahmed Samir**
+
+- GitHub: [@sasamir10](https://github.com/sasamir10)
+- LinkedIn: [Sabbir Ahmed Samir](https://linkedin.com/in/sabbirahmed10)

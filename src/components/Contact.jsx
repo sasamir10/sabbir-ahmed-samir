@@ -1,9 +1,13 @@
-const emailAddress = "sabbirxahmed18@gmail.com";
+const emailAddress = "sabbirahmed.samir18@gmail.com";
 const [emailLocalPart, emailDomain] = emailAddress.split("@");
 
 const socialLinks = [
-    { name: "GitHub", href: "#", icon: "github" },
-    { name: "LinkedIn", href: "#", icon: "linkedin" },
+    { name: "GitHub", href: "https://github.com/sasamir10", icon: "github" },
+    {
+        name: "LinkedIn",
+        href: "https://www.linkedin.com/in/sabbirahmed10/",
+        icon: "linkedin",
+    },
 ];
 
 function Icon({ name, className = "size-5" }) {
@@ -124,9 +128,10 @@ export default function Contact() {
                                 <a
                                     key={name}
                                     href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     aria-label={`${name} profile (link not provided)`}
                                     className="flex min-h-16 items-center gap-4 rounded-xl border border-border bg-bg-2 px-5 py-4 text-gray transition-all duration-200 hover:border-[rgba(0,229,192,0.35)] hover:bg-cyan-soft hover:text-cyan focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
-                                    onClick={(event) => event.preventDefault()}
                                 >
                                     <Icon
                                         name={icon}
@@ -155,7 +160,7 @@ export default function Contact() {
                             <span className="mr-2 font-mono text-[0.7rem] uppercase tracking-widest text-gray-dark">
                                 Location
                             </span>
-                            Sylhet, Bangladesh
+                            Dhaka, Bangladesh
                         </span>
                     </div>
                     <div className="flex items-center gap-3 text-gray">
@@ -164,7 +169,7 @@ export default function Contact() {
                             <span className="mr-2 font-mono text-[0.7rem] uppercase tracking-widest text-gray-dark">
                                 Availability
                             </span>
-                            Open to Freelance
+                            Open to Role
                         </span>
                     </div>
                 </div>

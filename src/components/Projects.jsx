@@ -1,54 +1,79 @@
 import { useEffect, useRef, useState } from "react";
+import bentoSpendImage from "../assets/images/bento-spend.png";
+import eventLwsImage from "../assets/images/eventlws.png";
+import fitLogImage from "../assets/images/fit-log.png";
+import projectHubImage from "../assets/images/project-hub.png";
+import bookNookImage from "../assets/images/yourbook-nook.png";
 
 const projects = [
     {
-        title: "E-Commerce Platform",
+        id: "booknook",
+        title: "BookNook",
         description:
-            "A fully responsive online store with product filtering, cart functionality, and smooth checkout flow.",
-        tags: ["React", "CSS3", "API"],
-        emoji: "🛒",
-        thumbnail: "bg-[linear-gradient(135deg,#0a1628,#0d2540)]",
-    },
-    {
-        title: "Analytics Dashboard",
-        description:
-            "Real-time data visualization dashboard with interactive charts, dark mode, and responsive grid layout.",
-        tags: ["React", "JavaScript", "Chart.js"],
-        emoji: "📊",
-        thumbnail: "bg-[linear-gradient(135deg,#0d2035,#05181a)]",
+            "A full-stack library management platform for discovering books, managing personal listings, and tracking borrowing and returns.",
+        technologies: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Express.js",
+            "MongoDB Atlas",
+            "Better Auth",
+        ],
+        image: bookNookImage,
+        liveUrl: "https://yourbook-nook.vercel.app/",
+        githubUrl: "https://github.com/sasamir10/booknook-client",
         featured: true,
     },
     {
-        title: "Music Player UI",
+        id: "fit-log",
+        title: "Fit Log",
         description:
-            "Sleek, animated music player with playlist management, equalizer visualization, and gesture controls.",
-        tags: ["HTML", "CSS", "JS"],
-        emoji: "🎵",
-        thumbnail: "bg-[linear-gradient(135deg,#121228,#1a0d2e)]",
+            "An API-powered workout discovery and planning application where users can explore exercises, search and filter workouts, save favorites, and create personalized daily plans.",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+        image: fitLogImage,
+        liveUrl: "https://fit-log-phi-next.vercel.app/",
+        githubUrl: "https://github.com/sasamir10/fit-log",
+        featured: false,
     },
     {
-        title: "Task Manager App",
+        id: "eventlws",
+        title: "EventLWS",
         description:
-            "Productivity app with drag-and-drop task organization, priority tagging, and deadline tracking.",
-        tags: ["React", "LocalStorage"],
-        emoji: "✅",
-        thumbnail: "bg-[linear-gradient(135deg,#0a2010,#052015)]",
+            "A full-stack event management platform where attendees can discover events, manage registrations, bookmark favorites, and interact with organizers through role-based dashboards.",
+        technologies: [
+            "React",
+            "Vite",
+            "JavaScript",
+            "Node.js",
+            "Express.js",
+            "SQLite",
+        ],
+        image: eventLwsImage,
+        liveUrl: "https://your-eventlws.vercel.app/",
+        githubUrl: "https://github.com/sasamir10/eventlws",
+        featured: false,
     },
     {
-        title: "Agency Landing Page",
+        id: "bento-spend",
+        title: "BentoSpend",
         description:
-            "High-impact agency website with scroll-triggered animations, parallax effects, and smooth transitions.",
-        tags: ["HTML", "CSS", "GSAP"],
-        emoji: "🌐",
-        thumbnail: "bg-[linear-gradient(135deg,#1a1205,#200d05)]",
+            "A responsive expense tracking dashboard that helps users manage expenses, monitor spending patterns, and track monthly budgets.",
+        technologies: ["React", "JavaScript", "Vite", "Tailwind CSS"],
+        image: bentoSpendImage,
+        liveUrl: "https://bento-spend-rnext.vercel.app/",
+        githubUrl: "https://github.com/sasamir10/BentoSpend",
+        featured: false,
     },
     {
-        title: "Weather Dashboard",
+        id: "project-hub",
+        title: "Project Hub",
         description:
-            "Live weather app with animated icons, 7-day forecast, and beautiful location-based backgrounds.",
-        tags: ["React", "API", "CSS"],
-        emoji: "☁️",
-        thumbnail: "bg-[linear-gradient(135deg,#051a28,#0a1020)]",
+            "A responsive project management dashboard that enables users to organize projects, manage budgets and quantities, track project statuses, and efficiently search, filter, and sort project records.",
+        technologies: ["React", "JavaScript", "Vite", "Tailwind CSS"],
+        image: projectHubImage,
+        liveUrl: "https://project-hub-rnext.vercel.app/",
+        githubUrl: "https://github.com/sasamir10/project-hub",
+        featured: false,
     },
 ];
 
@@ -57,13 +82,14 @@ const cardClasses =
 
 const revealClasses = "opacity-0 translate-y-10";
 
-function PlaceholderLink({ children, className, label }) {
+function PlaceholderLink({ children, className, label, href }) {
     return (
         <a
-            href="#"
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label={label}
             className={className}
-            onClick={(event) => event.preventDefault()}
         >
             {children}
         </a>
@@ -130,7 +156,7 @@ export default function Projects() {
                 <div className="grid grid-cols-3 gap-6 max-[1025px]:grid-cols-2 max-[769px]:grid-cols-1">
                     {projects.map((project, index) => (
                         <article
-                            key={project.title}
+                            key={project.id}
                             ref={(element) => {
                                 cardRefs.current[index] = element;
                             }}
@@ -138,15 +164,11 @@ export default function Projects() {
                             className={`${cardClasses} ${project.featured ? "border-[rgba(0,229,192,0.2)]" : "border-border"} ${revealClasses} ${revealedCards[index] ? "translate-y-0 opacity-100" : ""}`}
                         >
                             <div className="relative aspect-video overflow-hidden">
-                                <div
-                                    aria-hidden="true"
-                                    className={`relative flex size-full items-center justify-center ${project.thumbnail}`}
-                                >
-                                    <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(0,229,192,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,229,192,0.04)_1px,transparent_1px)] bg-size-[30px_30px]" />
-                                    <span className="relative z-2 text-[2.5rem] drop-shadow-[0_4px_8px_rgba(0,0,0,0.4)]">
-                                        {project.emoji}
-                                    </span>
-                                </div>
+                                <img
+                                    src={project.image}
+                                    alt={`${project.title} preview`}
+                                    className="size-full object-cover"
+                                />
 
                                 <div
                                     aria-hidden="true"
@@ -160,12 +182,12 @@ export default function Projects() {
 
                             <div className="flex flex-1 flex-col gap-[0.7rem] p-6">
                                 <div className="flex flex-wrap gap-[0.4rem]">
-                                    {project.tags.map((tag) => (
+                                    {project.technologies.map((technology) => (
                                         <span
-                                            key={tag}
+                                            key={technology}
                                             className="rounded-[4px] border border-border bg-cyan-soft px-[0.55rem] py-[0.2rem] font-mono text-[0.68rem] tracking-[0.04em] text-cyan"
                                         >
-                                            {tag}
+                                            {technology}
                                         </span>
                                     ))}
                                 </div>
@@ -179,17 +201,21 @@ export default function Projects() {
 
                                 <div className="mt-2 flex gap-[0.7rem]">
                                     <PlaceholderLink
+                                        href={project.liveUrl}
                                         label={`Live Demo for ${project.title}`}
                                         className="rounded-md bg-cyan px-[0.9rem] py-[0.45rem] font-mono text-[0.75rem] font-bold tracking-[0.03em] text-bg transition-all duration-250 hover:-translate-y-0.5 hover:bg-cyan-dim focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
                                     >
                                         Live Demo ↗
                                     </PlaceholderLink>
-                                    <PlaceholderLink
-                                        label={`GitHub for ${project.title}`}
-                                        className="rounded-md border border-border bg-transparent px-[0.9rem] py-[0.45rem] font-mono text-[0.75rem] tracking-[0.03em] text-gray transition-all duration-250 hover:border-cyan hover:bg-cyan-soft hover:text-cyan focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
-                                    >
-                                        GitHub
-                                    </PlaceholderLink>
+                                    {project.githubUrl && (
+                                        <PlaceholderLink
+                                            href={project.githubUrl}
+                                            label={`GitHub for ${project.title}`}
+                                            className="rounded-md border border-border bg-transparent px-[0.9rem] py-[0.45rem] font-mono text-[0.75rem] tracking-[0.03em] text-gray transition-all duration-250 hover:border-cyan hover:bg-cyan-soft hover:text-cyan focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan"
+                                        >
+                                            GitHub
+                                        </PlaceholderLink>
+                                    )}
                                 </div>
                             </div>
                         </article>

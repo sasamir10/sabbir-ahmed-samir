@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import bentoSpendImage from "../assets/images/bento-spend.png";
+import bookShelfImage from "../assets/images/bookshelf.png";
 import eventLwsImage from "../assets/images/eventlws.png";
 import fitLogImage from "../assets/images/fit-log.png";
 import projectHubImage from "../assets/images/project-hub.png";
@@ -51,6 +52,24 @@ const projects = [
         image: eventLwsImage,
         liveUrl: "https://your-eventlws.vercel.app/",
         githubUrl: "https://github.com/sasamir10/eventlws",
+        featured: false,
+    },
+    {
+        id: "bookshelf",
+        title: "BookShelf",
+        description:
+            "A responsive book discovery and reading management platform where users can explore books, search and filter the catalog, manage personal reading lists, and track reading progress.",
+        technologies: [
+            "React",
+            "JavaScript",
+            "Vite",
+            "Tailwind CSS",
+            "Express.js",
+            "SQLite3",
+        ],
+        image: bookShelfImage,
+        liveUrl: "https://yourbook-shelf.vercel.app/",
+        githubUrl: "https://github.com/sasamir10/book-shelf",
         featured: false,
     },
     {

@@ -150,10 +150,7 @@
 @keyframes hero-float-code {
     0%,
     100% {
-        transform: translate(
-            var(--parallax-x, 0px),
-            var(--parallax-y, 0px)
-        );
+        transform: translate(var(--parallax-x, 0px), var(--parallax-y, 0px));
         opacity: 0.6;
     }
 
@@ -320,7 +317,54 @@
 
 @media (max-width: 480px) {
     .hero-code-float {
+        display: block;
+        font-size: 0.55rem;
+        color: rgba(0, 229, 192, 0.2);
+        filter: blur(0.3px);
+    }
+
+    /* Hide selected snippets to avoid clutter */
+    .hero-code-float.c2,
+    .hero-code-float.c4,
+    .hero-code-float.c6,
+    .hero-code-float.c8,
+    .hero-code-float.c10,
+    .hero-code-float.c11 {
         display: none;
+    }
+
+    /* Reposition visible snippets around the hero visual */
+    .hero-code-float.c1 {
+        top: 155px;
+        left: 2%;
+    }
+
+    .hero-code-float.c3 {
+        top: 225px;
+        right: 2%;
+        left: auto;
+    }
+
+    .hero-code-float.c5 {
+        top: 355px;
+        left: 3%;
+    }
+
+    .hero-code-float.c7 {
+        top: 175px;
+        right: 4%;
+        left: auto;
+    }
+
+    .hero-code-float.c9 {
+        top: 390px;
+        right: 4%;
+        left: auto;
+    }
+
+    .hero-code-float.c12 {
+        top: 290px;
+        left: 3%;
     }
 }
 

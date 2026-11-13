@@ -9,7 +9,7 @@ const navigationItems = [
 ];
 
 const navbarBaseClass =
-    "fixed inset-x-16 top-4 z-[1000] rounded-[999px] border backdrop-blur-[14px] transition-all duration-[400ms] ease-[ease]";
+    "fixed inset-x-0 top-0 z-[1000] rounded-none border backdrop-blur-[14px] transition-all duration-[400ms] ease-[ease] min-[769px]:inset-x-16 min-[769px]:top-4 min-[769px]:rounded-[999px]";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -132,7 +132,7 @@ export default function Navbar() {
                     className="mr-auto whitespace-nowrap font-mono text-[1.15rem] font-bold tracking-[0.02em] text-white transition-colors duration-300 hover:text-cyan"
                     onClick={(event) => handleNavigationClick(event, "home")}
                 >
-                    <span className="text-cyan">&lt;</span>samir
+                    <span className="text-cyan">&lt;</span>Samir
                     <span className="text-cyan">/&gt;</span>
                 </a>
 

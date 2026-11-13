@@ -69,9 +69,9 @@ export default function About() {
     return (
         <section
             id="about"
-            className="relative bg-bg-2 px-10 py-28 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-[linear-gradient(90deg,transparent,var(--border),transparent)] before:content-['']"
+            className="relative bg-bg-2 px-10 py-28 max-[901px]:px-5 max-[901px]:py-20 max-[480px]:px-11 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-[linear-gradient(90deg,transparent,var(--border),transparent)] before:content-['']"
         >
-            <div className="mx-auto max-w-content px-8">
+            <div className="mx-auto max-w-content px-8 max-[901px]:px-0">
                 <div className="mb-5 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-cyan opacity-85">
                     About The Behind Architect
                 </div>

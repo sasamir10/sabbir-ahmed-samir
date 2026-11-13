@@ -167,8 +167,11 @@ export default function Skills() {
     }, []);
 
     return (
-        <section id="skills" className="relative px-10 py-28">
-            <div className="mx-auto max-w-content px-8">
+        <section
+            id="skills"
+            className="relative px-10 py-28 max-[901px]:px-5 max-[901px]:py-20 max-[480px]:px-11"
+        >
+            <div className="mx-auto max-w-content px-8 max-[901px]:px-0">
                 <div className="mb-5 font-mono text-[0.72rem] uppercase tracking-[0.22em] text-cyan opacity-85">
                     Skills
                 </div>

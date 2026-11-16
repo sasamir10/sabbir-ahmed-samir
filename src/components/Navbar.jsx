@@ -132,7 +132,7 @@ export default function Navbar() {
                     className="mr-auto whitespace-nowrap font-mono text-[1.15rem] font-bold tracking-[0.02em] text-white transition-colors duration-300 hover:text-cyan"
                     onClick={(event) => handleNavigationClick(event, "home")}
                 >
-                    <span className="text-cyan">&lt;</span>Samir
+                    <span className="text-cyan">&lt;</span>samir
                     <span className="text-cyan">/&gt;</span>
                 </a>
 

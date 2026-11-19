@@ -339,7 +339,7 @@ export default function Hero() {
                     </p>
 
                     <a
-                        href="/public/Resume.pdf"
+                        href="/Resume.pdf"
                         download="Sabbir Ahmed Samir_Resume.pdf"
                         className="inline-flex w-fit items-center gap-2 rounded-lg border border-[rgba(0,229,192,0.35)] bg-[rgba(0,229,192,0.08)] px-5 py-3 font-head text-[0.9rem] font-bold text-cyan transition-all duration-200 hover:-translate-y-0.5 hover:bg-[rgba(0,229,192,0.15)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan"
                     >
